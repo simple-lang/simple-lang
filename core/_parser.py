@@ -1,3 +1,6 @@
+"""
+Parser module.
+"""
 from core._sanitizer import Sanitizer
 from core._tokenizer import Tokenizer
 
@@ -19,4 +22,10 @@ class Parser:
         self._code = Sanitizer(code).get_clean_data()
         self._tokens = Tokenizer(self._code).get_tokens()
 
-        print(self._tokens)
+        # print(self._tokens)
+
+        if self._tokens[0] == 'print':
+            print(self._tokens[1:])
+
+        else:
+            print('Invalid syntax.')

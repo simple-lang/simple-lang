@@ -1,3 +1,6 @@
+"""
+Tokenizer section of the parser.
+"""
 class Tokenizer:
 
     def __init__(self, string: str, **kwargs):

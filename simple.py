@@ -1,3 +1,10 @@
+"""
+Simple Language Interpreter
+Author: Md. Almas Ali
+Version: 0.0.1
+
+"""
+
 import argparse
 
 from core._bootstrap import Startup
@@ -19,9 +26,13 @@ if __name__ == '__main__':
 
     if args.interactive:
         while True:
-            _code = input('>>> ')
-            _prog_parser = Parser()
-            _prog_parser.parse(_code)
+            _code = input('>>> ') # get input from user
+
+            if _code == 'exit':
+                break  # exit the shell
+
+            _prog_parser = Parser() # create a parser object
+            _prog_parser.parse(_code) # parse the code
 
     else:
-        print('this')
+        print('this') # TODO: implement this

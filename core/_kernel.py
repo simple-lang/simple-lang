@@ -1,3 +1,6 @@
+"""
+The heart of the language. The kernel is responsible for loading and executing functions.
+"""
 class Kernel:
     """The base class for all kernels."""
 
